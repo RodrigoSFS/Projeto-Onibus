@@ -20,7 +20,7 @@ public class Onibus{
       }
     }
 
-    while(escolha != 0 || escolhaAssento != 0){
+    while(escolha != 0){
       System.out.println("   ________________");
       System.out.println("  /----------------\\");
       for (int i = 0 ; i < 10 ; i++){
