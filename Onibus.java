@@ -77,6 +77,7 @@ public class Onibus{
       {
         System.out.println();
         System.out.println(" Opcao invalida digite novamente: ");
+        System.out.println();
         System.out.println(" Digite [1] para comprar um assento.");
         System.out.println(" Digite [2] para reservar um assento.");
         System.out.println(" Digite [3] para cancelar a reserva de um assento.");
@@ -97,6 +98,7 @@ public class Onibus{
         {
           System.out.println();
           System.out.println(" Opcao invalida digite novamente: ");
+          System.out.println();
           System.out.println(" Digite que assento deseja que seja realizado a operação: ");
           System.out.println("      Ou digite [0] para voltar a selecao anterior.");
           System.out.println();
