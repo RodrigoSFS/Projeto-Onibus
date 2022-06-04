@@ -63,29 +63,39 @@ public class Onibus{
       }
 
       System.out.println("  ------------------");
-      
+
+      System.out.println();
       System.out.println(" Digite [1] para comprar um assento.");
       System.out.println(" Digite [2] para reservar um assento.");
       System.out.println(" Digite [3] para cancelar a reserva de um assento.");
       System.out.println(" Digite [0] para Fechar o Programa.");
       escolha = sc.nextInt();
+      System.out.println();
 
       while (escolha < 0 || escolha > 3)
       {
+        System.out.println();
         System.out.println(" Opcao invalida digite novamente: ");
         System.out.println(" Digite [1] para comprar um assento.");
         System.out.println(" Digite [2] para reservar um assento.");
         System.out.println(" Digite [3] para cancelar a reserva de um assento.");
         escolha = sc.nextInt();
+        System.out.println();
       }
       if (escolha != 0){
+        System.out.println();
         System.out.println(" Digite que assento deseja que seja realizado a operação: ");
+        System.out.println("      Ou digite [0] para voltar a selecao anterior.");
+        System.out.println();
         escolhaAssento = sc.nextInt();
 
-        while (escolhaAssento < 1 || escolhaAssento > 40)
+        while (escolhaAssento < 0 || escolhaAssento > 40)
         {
+          System.out.println();
           System.out.println(" Opcao invalida digite novamente: ");
           System.out.println(" Digite que assento deseja que seja realizado a operação: ");
+          System.out.println("      Ou digite [0] para voltar a selecao anterior.");
+          System.out.println();
           escolhaAssento = sc.nextInt();
         }
       }
