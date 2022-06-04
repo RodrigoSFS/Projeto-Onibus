@@ -20,7 +20,7 @@ public class Onibus{
       }
     }
 
-    while(escolha != 0){
+    while(escolha != 0 || escolhaAssento != 0){
       System.out.println("   ________________");
       System.out.println("  /----------------\\");
       for (int i = 0 ; i < 10 ; i++){
@@ -67,6 +67,7 @@ public class Onibus{
       System.out.println(" Digite [1] para comprar um assento.");
       System.out.println(" Digite [2] para reservar um assento.");
       System.out.println(" Digite [3] para cancelar a reserva de um assento.");
+      System.out.println(" Digite [0] para Fechar o Programa.");
       escolha = sc.nextInt();
 
       while (escolha < 0 || escolha > 3)
