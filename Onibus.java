@@ -25,6 +25,7 @@ public class Onibus{
       System.out.println("  /----------------\\");
       for (int i = 0 ; i < 10 ; i++){
         for (int j = 0 ; j < 4 ; j++){
+
           if (j == 0 || j == 2){
             System.out.print(" | ");
           } else {
@@ -35,28 +36,32 @@ public class Onibus{
           {
             if (escolhaAssento == assentos [i] [j])
             {
-              assentos [i] [j] = -1;
+              assentos [i] [j] = 0;
             }
           }else if (escolha == 2){
             if (escolhaAssento == assentos [i] [j])
             {
-              assentos [i] [j] = -2;
+              assentos [i] [j] = assentos [i] [j] * -1;
             }
-          }else if (escolha ==3 && assentos [i] [j] == -2){
-            assentos [i] [j] = escolhaAssento;
+          } else if (escolha == 3){
+            if (escolhaAssento == assentos [i] [j] * -1)
+            {
+              assentos [i] [j] = assentos [i] [j] * -1;
+            }
           }
           
-          if (assentos [i] [j] != -1 && assentos [i] [j] != -2){
+          if (assentos [i] [j] != 0 && assentos [i] [j] > 0){
             System.out.printf("%3d", assentos [i] [j]);
-          } else if (assentos [i] [j] == -1){
+          } else if (assentos [i] [j] == 0){
             System.out.printf("%3s", "V");
-          } else if (assentos [i] [j] == -2){
+          } else if (assentos [i] [j] < 0){
             System.out.printf("%3s", "R");
           }
         }
         System.out.print("|");
         System.out.println();
       }
+
       System.out.println("  ------------------");
       
       System.out.println(" Digite [1] para comprar um assento.");
@@ -64,9 +69,24 @@ public class Onibus{
       System.out.println(" Digite [3] para cancelar a reserva de um assento.");
       escolha = sc.nextInt();
 
+      while (escolha < 0 || escolha > 3)
+      {
+        System.out.println(" Opcao invalida digite novamente: ");
+        System.out.println(" Digite [1] para comprar um assento.");
+        System.out.println(" Digite [2] para reservar um assento.");
+        System.out.println(" Digite [3] para cancelar a reserva de um assento.");
+        escolha = sc.nextInt();
+      }
       if (escolha != 0){
         System.out.println(" Digite que assento deseja que seja realizado a operação: ");
         escolhaAssento = sc.nextInt();
+
+        while (escolhaAssento < 1 || escolhaAssento > 40)
+        {
+          System.out.println(" Opcao invalida digite novamente: ");
+          System.out.println(" Digite que assento deseja que seja realizado a operação: ");
+          escolhaAssento = sc.nextInt();
+        }
       }
     }
   
