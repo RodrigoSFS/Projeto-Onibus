@@ -73,7 +73,7 @@ public class Onibus{
       System.out.println();
       System.out.println(" Opcao escolhida: " + escolha);
 
-      while (escolha < 0 || escolha > 3)
+      while (escolha < 1 || escolha > 3)
       {
         System.out.println();
         System.out.println(" Opcao invalida digite novamente: ");
@@ -94,7 +94,7 @@ public class Onibus{
         System.out.println();
         System.out.println(" Opcao escolhida: " + escolhaAssento);
 
-        while (escolhaAssento < 0 || escolhaAssento > 40)
+        while (escolhaAssento < 1 || escolhaAssento > 40)
         {
           System.out.println();
           System.out.println(" Opcao invalida digite novamente: ");
