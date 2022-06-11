@@ -116,6 +116,8 @@ public class OnibusCopy {
       }
     }
 
+    sc.close();
+
   }
 
   public static void option2(int assentos[][]) {
@@ -134,6 +136,8 @@ public class OnibusCopy {
       }
     }
 
+    sc.close();
+
   }
 
   public static void option3(int assentos[][]) {
@@ -151,6 +155,8 @@ public class OnibusCopy {
         }
       }
     }
+
+    sc.close();
 
   }
 
