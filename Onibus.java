@@ -5,7 +5,7 @@ public class Onibus{
     
     int assentos [] [] = new int [10] [4];
     int numeroAssento = 1;
-    int escolha = -5;
+    int escolha = 1;
     int escolhaAssento = 0;
 
     Scanner sc = new Scanner(System.in);
