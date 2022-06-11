@@ -3,24 +3,16 @@ import java.util.Scanner;
 public class OnibusCopy {
   public static void main(String[] args) {
 
-    int assentos[][] = new int[10][4];
-    int numeroAssento = 1;
-    int escolha = 1;
-
     Scanner sc = new Scanner(System.in);
 
-    clearScreen();
+    int assentos[][] = new int[10][4];
+    int escolha = 1;
 
-    System.out.println("===========>> Seja Bem Vindo ao <===========");
-    System.out.println("  Sistema de reservas e vendas de assentos ");
-    System.out.println();
+    System.out.println("===============>> Seja Bem Vindo <<===============");
+    System.out.println("==>> Sistema de reservas e vendas de assentos <<==");
+    System.out.println("==========>> Rodrigo - Marcos - Bruno <<==========");
 
-    for (int i = 0; i < 10; i++) {
-      for (int j = 0; j < 4; j++) {
-        assentos[i][j] = numeroAssento;
-        numeroAssento++;
-      }
-    }
+    preencheOnibus(assentos);
 
     while (escolha != 0) {
 
@@ -29,7 +21,7 @@ public class OnibusCopy {
       System.out.println();
 
       String option[] = { " Digite [1] para comprar um assento.", " Digite [2] para reservar um assento.",
-          " Digite [3] para cancelar a reserva de um assento.", " Digite [0] para Fechar o Programa." };
+          " Digite [3] para cancelar a reserva de um assento.", " Digite [0] para Fechar o Programa. " };
 
       for (String op : option) {
         System.out.println(op);
@@ -38,17 +30,17 @@ public class OnibusCopy {
       try {
         escolha = sc.nextInt();
         switch (escolha) {
-          case 0:
-            System.out.println("Saindo...");
-            break;
           case 1:
-            option1(assentos [] []);
+            option1(assentos);
             break;
           case 2:
-            option2(assentos [] []);
+            option2(assentos);
             break;
           case 3:
-            option3(assentos [] []);
+            option3(assentos);
+            break;
+          case 0:
+            System.out.println("Saindo...");
             break;
         }
       } catch (Exception ex) {
@@ -57,9 +49,23 @@ public class OnibusCopy {
       }
       System.out.println();
 
-      sc.close();
+      clearScreen();
 
     }
+
+    sc.close();
+  }
+
+  public static void preencheOnibus(int assentos[][]) {
+    int numeroAssento = 1;
+
+    for (int i = 0; i < 10; i++) {
+      for (int j = 0; j < 4; j++) {
+        assentos[i][j] = numeroAssento;
+        numeroAssento++;
+      }
+    }
+
   }
 
   public static void clearScreen() {
@@ -99,7 +105,7 @@ public class OnibusCopy {
 
     System.out.println("Opção 1 escolhida");
 
-    System.out.println("Digite que assento deseja que seja realizado a operação:");
+    System.out.print("Digite que assento deseja que seja realizado a operação:");
     int escolhaAssento = sc.nextInt();
 
     for (int l = 0; l < 10; l++) {
@@ -110,16 +116,14 @@ public class OnibusCopy {
       }
     }
 
-    sc.close();
-
   }
 
   public static void option2(int assentos[][]) {
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Opção 1 escolhida");
+    System.out.println("Opção 2 escolhida");
 
-    System.out.println("Digite que assento deseja que seja realizado a operação:");
+    System.out.print("Digite que assento deseja que seja realizado a operação:");
     int escolhaAssento = sc.nextInt();
 
     for (int l = 0; l < 10; l++) {
@@ -130,16 +134,14 @@ public class OnibusCopy {
       }
     }
 
-    sc.close();
-
   }
 
   public static void option3(int assentos[][]) {
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Opção 1 escolhida");
+    System.out.println("Opção 3 escolhida");
 
-    System.out.println("Digite que assento deseja que seja realizado a operação:");
+    System.out.print("Digite que assento deseja que seja realizado a operação:");
     int escolhaAssento = sc.nextInt();
 
     for (int l = 0; l < 10; l++) {
@@ -150,7 +152,6 @@ public class OnibusCopy {
       }
     }
 
-    sc.close();
   }
 
 }
