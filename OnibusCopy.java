@@ -8,9 +8,9 @@ public class OnibusCopy {
     int assentos[][] = new int[10][4];
     int escolha = 1;
 
-    System.out.println("===============>> Seja Bem Vindo <<===============");
-    System.out.println("==>> Sistema de reservas e vendas de assentos <<==");
-    System.out.println("==========>> Rodrigo - Marcos - Bruno <<==========");
+    System.out.println();
+
+    printOla();
 
     preencheOnibus(assentos);
 
@@ -20,12 +20,7 @@ public class OnibusCopy {
 
       System.out.println();
 
-      String option[] = { " Digite [1] para comprar um assento.", " Digite [2] para reservar um assento.",
-          " Digite [3] para cancelar a reserva de um assento.", " Digite [0] para Fechar o Programa. " };
-
-      for (String op : option) {
-        System.out.println(op);
-      }
+      printMenu();
 
       try {
         escolha = sc.nextInt();
@@ -47,13 +42,25 @@ public class OnibusCopy {
         System.out.println("Por favor, entre com um inteiro entre 1 e 3");
         sc.next();
       }
-      System.out.println();
-
-      clearScreen();
 
     }
 
     sc.close();
+  }
+
+  public static void printOla(){
+    System.out.println("===============>> Seja Bem Vindo <<===============");
+    System.out.println("==>> Sistema de reservas e vendas de assentos <<==");
+    System.out.println("==========>> Rodrigo - Marcos - Bruno <<==========");
+  }
+
+  public static void printMenu() {
+    String option[] = { " Digite [1] para comprar um assento.", " Digite [2] para reservar um assento.",
+        " Digite [3] para cancelar a reserva de um assento.", " Digite [0] para Fechar o Programa. " };
+
+    for (String op : option) {
+      System.out.println(op);
+    }
   }
 
   public static void preencheOnibus(int assentos[][]) {
@@ -116,7 +123,7 @@ public class OnibusCopy {
       }
     }
 
-    sc.close();
+    clearScreen();
 
   }
 
@@ -136,7 +143,7 @@ public class OnibusCopy {
       }
     }
 
-    sc.close();
+    clearScreen();
 
   }
 
@@ -156,7 +163,7 @@ public class OnibusCopy {
       }
     }
 
-    sc.close();
+    clearScreen();
 
   }
 
