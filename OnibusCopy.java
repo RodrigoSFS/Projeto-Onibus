@@ -42,13 +42,13 @@ public class OnibusCopy {
             System.out.println("Saindo...");
             break;
           case 1:
-            option1(assentos);
+            option1(assentos [] []);
             break;
           case 2:
-            option2(assentos);
+            option2(assentos [] []);
             break;
           case 3:
-            option3(assentos);
+            option3(assentos [] []);
             break;
         }
       } catch (Exception ex) {
