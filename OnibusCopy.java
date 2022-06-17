@@ -52,6 +52,7 @@ public class OnibusCopy {
     System.out.println("===============>> Seja Bem Vindo <<===============");
     System.out.println("==>> Sistema de reservas e vendas de assentos <<==");
     System.out.println("==========>> Rodrigo - Marcos - Bruno <<==========");
+    System.out.println();
   }
 
   public static void printMenu() {
@@ -114,6 +115,8 @@ public class OnibusCopy {
 
     System.out.print("Digite que assento deseja que seja realizado a operação:");
     int escolhaAssento = sc.nextInt();
+    
+    clearScreen();
 
     for (int l = 0; l < 10; l++) {
       for (int c = 0; c < 4; c++) {
@@ -122,8 +125,6 @@ public class OnibusCopy {
         }
       }
     }
-
-    clearScreen();
 
   }
 
@@ -135,6 +136,8 @@ public class OnibusCopy {
     System.out.print("Digite que assento deseja que seja realizado a operação:");
     int escolhaAssento = sc.nextInt();
 
+    clearScreen();
+
     for (int l = 0; l < 10; l++) {
       for (int c = 0; c < 4; c++) {
         if (escolhaAssento == assentos[l][c]) {
@@ -142,8 +145,6 @@ public class OnibusCopy {
         }
       }
     }
-
-    clearScreen();
 
   }
 
@@ -155,6 +156,8 @@ public class OnibusCopy {
     System.out.print("Digite que assento deseja que seja realizado a operação:");
     int escolhaAssento = sc.nextInt();
 
+    clearScreen();
+
     for (int l = 0; l < 10; l++) {
       for (int c = 0; c < 4; c++) {
         if (escolhaAssento == assentos[l][c] * -1) {
@@ -162,8 +165,6 @@ public class OnibusCopy {
         }
       }
     }
-
-    clearScreen();
 
   }
 
